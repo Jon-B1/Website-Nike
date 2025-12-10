@@ -172,7 +172,6 @@ form {
 	flex-direction: column;
 	width: 20%;
 	padding: 15px;
-	margin-top: 150px;
 	justify-content: center;
 	align-items: center;
 	background-color: #a4a4a4;
@@ -185,7 +184,6 @@ form button {
 	border: 1px solid black;
 	border-radius: 5px;
 	color: white;
-	margin-top: 10px;
 }
 
 form label,
@@ -198,5 +196,5 @@ input {
 form input {
 	padding: 5px;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 1px solid #e0e0e0;
 }

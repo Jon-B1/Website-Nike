@@ -1,11 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        :root {
+            --page-bg: #d0d4d5;
+            --form-bg: #a4a4a4;
+            --button: rgb(64, 83, 254);
+            --muted: #666;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            background: var(--page-bg);
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: fit-content;
+            background: #fff;
+            padding: 28px;
+            margin: 100px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card h1 {
+            margin: 0 0 8px;
+            font-size: 22px;
+        }
+
+        .card p {
+            margin: 0 0 18px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .center-thing {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--form-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: #000;
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        textarea {
+            /* min-height: 100px; */
+            resize: vertical;
+        }
+
+        button {
+            background: var(--button);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #888;
+            margin-top: 12px;
+        }
+
+        .error {
+            color: #b00020;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="card" role="main">
+        <div class="center-thing">✉️</div>
+        <h1>Contact Us</h1>
+        <p>Send a short message and we'll get back to you.</p>
+
+        <form id="contactForm" novalidate>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <input id="email" name="email" type="email" placeholder="Your email" required />
+            <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
+
 </html>
